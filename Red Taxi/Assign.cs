@@ -73,7 +73,7 @@ namespace Red_Taxi
 
                 if (r == DialogResult.Yes)
                 {
-                    lmfao();
+                    vTypeChecker();
                     conn.Open();
                     MySqlCommand comm = new MySqlCommand("INSERT INTO oncall(vehicle,driver,note) VALUES('" + vehicle_type + "','" +
                         int.Parse(textBoxDriver.Text) + "','" + textBoxNote.Text + "')", conn);
@@ -91,7 +91,7 @@ namespace Red_Taxi
             }
         }
 
-        public void lmfao()
+        public void vTypeChecker()
         {
             /*
              * 
