@@ -145,5 +145,31 @@ namespace Red_Taxi
             }
         }
 
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text != "")
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand comm = new MySqlCommand("SELECT * FROM vehicles WHERE vehicleType = " + textBoxSearch.Text, conn);
+                    MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                    conn.Close();
+                }
+            }
+
+            else
+            {
+                Rifrish();
+            }
+        }
     }
 }

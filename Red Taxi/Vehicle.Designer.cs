@@ -51,7 +51,7 @@
             this.buttonInsert.Location = new System.Drawing.Point(45, 341);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(75, 23);
-            this.buttonInsert.TabIndex = 0;
+            this.buttonInsert.TabIndex = 6;
             this.buttonInsert.Text = "Insert";
             this.buttonInsert.UseVisualStyleBackColor = true;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
@@ -61,7 +61,7 @@
             this.buttonUpdate.Location = new System.Drawing.Point(126, 341);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 1;
+            this.buttonUpdate.TabIndex = 7;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             // 
@@ -70,8 +70,8 @@
             this.buttonLogout.Location = new System.Drawing.Point(207, 341);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogout.TabIndex = 2;
-            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.TabIndex = 8;
+            this.buttonLogout.Text = "Back";
             this.buttonLogout.UseVisualStyleBackColor = true;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
@@ -80,14 +80,18 @@
             this.textBoxSearch.Location = new System.Drawing.Point(103, 12);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(121, 20);
-            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 38);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -119,7 +123,7 @@
             this.textBoxPNumber.Location = new System.Drawing.Point(103, 198);
             this.textBoxPNumber.Name = "textBoxPNumber";
             this.textBoxPNumber.Size = new System.Drawing.Size(121, 20);
-            this.textBoxPNumber.TabIndex = 13;
+            this.textBoxPNumber.TabIndex = 1;
             // 
             // comboBoxStatus
             // 
@@ -133,7 +137,7 @@
             this.comboBoxStatus.Location = new System.Drawing.Point(103, 309);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxStatus.TabIndex = 14;
+            this.comboBoxStatus.TabIndex = 5;
             // 
             // label2
             // 
@@ -167,14 +171,14 @@
             this.comboBoxVehicle.Location = new System.Drawing.Point(103, 226);
             this.comboBoxVehicle.Name = "comboBoxVehicle";
             this.comboBoxVehicle.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVehicle.TabIndex = 18;
+            this.comboBoxVehicle.TabIndex = 2;
             // 
             // textBoxCNumber
             // 
             this.textBoxCNumber.Location = new System.Drawing.Point(103, 257);
             this.textBoxCNumber.Name = "textBoxCNumber";
             this.textBoxCNumber.Size = new System.Drawing.Size(121, 20);
-            this.textBoxCNumber.TabIndex = 19;
+            this.textBoxCNumber.TabIndex = 3;
             // 
             // label5
             // 
@@ -190,7 +194,7 @@
             this.textBoxBAmount.Location = new System.Drawing.Point(103, 283);
             this.textBoxBAmount.Name = "textBoxBAmount";
             this.textBoxBAmount.Size = new System.Drawing.Size(121, 20);
-            this.textBoxBAmount.TabIndex = 22;
+            this.textBoxBAmount.TabIndex = 4;
             // 
             // Vehicle
             // 
