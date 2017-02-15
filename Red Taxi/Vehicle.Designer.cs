@@ -216,7 +216,7 @@
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Vehicle";

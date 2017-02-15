@@ -59,6 +59,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonAssign);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Operator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Operator";
