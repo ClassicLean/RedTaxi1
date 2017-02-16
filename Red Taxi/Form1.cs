@@ -123,5 +123,15 @@ namespace Red_Taxi
         {
             textBoxPass.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

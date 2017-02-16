@@ -77,6 +77,7 @@
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(216)))));
             this.textBoxSearch.Location = new System.Drawing.Point(103, 12);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(121, 20);
@@ -120,6 +121,7 @@
             // 
             // textBoxPNumber
             // 
+            this.textBoxPNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(216)))));
             this.textBoxPNumber.Location = new System.Drawing.Point(103, 198);
             this.textBoxPNumber.Name = "textBoxPNumber";
             this.textBoxPNumber.Size = new System.Drawing.Size(121, 20);
@@ -175,6 +177,7 @@
             // 
             // textBoxCNumber
             // 
+            this.textBoxCNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(216)))));
             this.textBoxCNumber.Location = new System.Drawing.Point(103, 257);
             this.textBoxCNumber.Name = "textBoxCNumber";
             this.textBoxCNumber.Size = new System.Drawing.Size(121, 20);
@@ -191,6 +194,7 @@
             // 
             // textBoxBAmount
             // 
+            this.textBoxBAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(216)))));
             this.textBoxBAmount.Location = new System.Drawing.Point(103, 283);
             this.textBoxBAmount.Name = "textBoxBAmount";
             this.textBoxBAmount.Size = new System.Drawing.Size(121, 20);
@@ -200,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(324, 379);
             this.Controls.Add(this.textBoxBAmount);
             this.Controls.Add(this.label5);

@@ -169,6 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(630, 311);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxNote);
@@ -182,7 +183,7 @@
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.buttonRecord);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Assign";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assign";

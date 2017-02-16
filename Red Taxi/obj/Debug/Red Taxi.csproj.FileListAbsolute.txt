@@ -40,3 +40,14 @@ C:\Users\lrsalfafara\Documents\CS 222 - Event Driven Programming\Red Taxi\Red Ta
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\bin\Debug\Red Taxi.exe.config
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.exe
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.pdb
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\bin\Debug\Red Taxi.exe
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\bin\Debug\Red Taxi.pdb
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Assign.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Employee.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Form1.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.HR.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Operator.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Properties.Resources.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Vehicle.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.csproj.GenerateResource.Cache
