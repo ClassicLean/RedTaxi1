@@ -36,11 +36,12 @@
             // 
             // buttonAssign
             // 
-            this.buttonAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.buttonAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
             this.buttonAssign.FlatAppearance.BorderSize = 0;
             this.buttonAssign.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.buttonAssign.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAssign.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssign.ForeColor = System.Drawing.Color.White;
             this.buttonAssign.Location = new System.Drawing.Point(101, 41);
             this.buttonAssign.Name = "buttonAssign";
@@ -52,11 +53,12 @@
             // 
             // buttonLogout
             // 
-            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(45)))), ((int)(((byte)(63)))));
+            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
             this.buttonLogout.FlatAppearance.BorderSize = 0;
             this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.buttonLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogout.ForeColor = System.Drawing.Color.White;
             this.buttonLogout.Location = new System.Drawing.Point(101, 70);
             this.buttonLogout.Name = "buttonLogout";

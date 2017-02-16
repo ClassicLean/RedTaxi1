@@ -45,39 +45,58 @@
             // 
             // buttonRecord
             // 
+            this.buttonRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonRecord.FlatAppearance.BorderSize = 0;
+            this.buttonRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRecord.ForeColor = System.Drawing.Color.White;
             this.buttonRecord.Location = new System.Drawing.Point(183, 279);
             this.buttonRecord.Name = "buttonRecord";
             this.buttonRecord.Size = new System.Drawing.Size(75, 23);
             this.buttonRecord.TabIndex = 4;
             this.buttonRecord.Text = "Record";
-            this.buttonRecord.UseVisualStyleBackColor = true;
+            this.buttonRecord.UseVisualStyleBackColor = false;
             this.buttonRecord.Click += new System.EventHandler(this.buttonRecord_Click);
             // 
             // buttonView
             // 
+            this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonView.FlatAppearance.BorderSize = 0;
+            this.buttonView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonView.ForeColor = System.Drawing.Color.White;
             this.buttonView.Location = new System.Drawing.Point(264, 279);
             this.buttonView.Name = "buttonView";
             this.buttonView.Size = new System.Drawing.Size(75, 23);
             this.buttonView.TabIndex = 5;
             this.buttonView.Text = "View";
-            this.buttonView.UseVisualStyleBackColor = true;
+            this.buttonView.UseVisualStyleBackColor = false;
             this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // buttonLogout
             // 
+            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonLogout.FlatAppearance.BorderSize = 0;
+            this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
             this.buttonLogout.Location = new System.Drawing.Point(345, 279);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(75, 23);
             this.buttonLogout.TabIndex = 6;
             this.buttonLogout.Text = "Back";
-            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.UseVisualStyleBackColor = false;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Location = new System.Drawing.Point(253, 15);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(121, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(121, 14);
             this.textBoxSearch.TabIndex = 0;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -103,7 +122,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(202, 208);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Vehicle:";
             // 
@@ -112,7 +131,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(202, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Driver:";
             // 
@@ -121,13 +140,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(202, 260);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Note:";
             // 
             // comboBoxVehicle
             // 
-            this.comboBoxVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxVehicle.FormattingEnabled = true;
             this.comboBoxVehicle.Items.AddRange(new object[] {
             "",
@@ -144,16 +163,18 @@
             // 
             // textBoxDriver
             // 
+            this.textBoxDriver.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDriver.Location = new System.Drawing.Point(253, 227);
             this.textBoxDriver.Name = "textBoxDriver";
-            this.textBoxDriver.Size = new System.Drawing.Size(121, 20);
+            this.textBoxDriver.Size = new System.Drawing.Size(121, 14);
             this.textBoxDriver.TabIndex = 2;
             // 
             // textBoxNote
             // 
+            this.textBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNote.Location = new System.Drawing.Point(253, 253);
             this.textBoxNote.Name = "textBoxNote";
-            this.textBoxNote.Size = new System.Drawing.Size(121, 20);
+            this.textBoxNote.Size = new System.Drawing.Size(121, 14);
             this.textBoxNote.TabIndex = 3;
             // 
             // label4
@@ -161,7 +182,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(206, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Search:";
             // 
@@ -183,6 +204,7 @@
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.buttonRecord);
+            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Assign";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
