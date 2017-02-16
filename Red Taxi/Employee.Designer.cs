@@ -56,6 +56,7 @@
             // 
             // buttonInsert
             // 
+            this.buttonInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInsert.Location = new System.Drawing.Point(12, 508);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(75, 23);
@@ -65,6 +66,7 @@
             // 
             // buttonUpdate
             // 
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Location = new System.Drawing.Point(93, 508);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
@@ -74,6 +76,7 @@
             // 
             // buttonLogout
             // 
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.Location = new System.Drawing.Point(174, 508);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(75, 23);
@@ -84,9 +87,10 @@
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Location = new System.Drawing.Point(12, 12);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(156, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(156, 13);
             this.textBoxSearch.TabIndex = 3;
             // 
             // dataGridView1
@@ -180,13 +184,15 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(105, 193);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 13);
             this.textBox1.TabIndex = 15;
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(105, 219);
             this.comboBox1.Name = "comboBox1";
@@ -202,13 +208,15 @@
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(105, 272);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(100, 13);
             this.textBox2.TabIndex = 18;
             // 
             // comboBox2
             // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(105, 298);
             this.comboBox2.Name = "comboBox2";
@@ -217,27 +225,31 @@
             // 
             // textBox3
             // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Location = new System.Drawing.Point(105, 323);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(100, 13);
             this.textBox3.TabIndex = 20;
             // 
             // textBox4
             // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Location = new System.Drawing.Point(105, 349);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 13);
             this.textBox4.TabIndex = 21;
             // 
             // textBox5
             // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Location = new System.Drawing.Point(105, 375);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(100, 13);
             this.textBox5.TabIndex = 22;
             // 
             // comboBox3
             // 
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(104, 402);
             this.comboBox3.Name = "comboBox3";
