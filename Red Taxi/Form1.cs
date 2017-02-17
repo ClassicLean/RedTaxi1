@@ -21,12 +21,7 @@ namespace Red_Taxi
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -38,12 +33,11 @@ namespace Red_Taxi
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
-                string fn, ln, type;
 
                 if (dt.Rows.Count == 1)
                 {
                    
-                    type = dt.Rows[0]["eType"].ToString();
+                    string type = dt.Rows[0]["eType"].ToString();
 
                     Checker(type);
                 }
@@ -84,14 +78,14 @@ namespace Red_Taxi
 
             else if( a == "1")
             {
-                Operator operate = new Operator();
-                operate.Show();
-                operate.reference_to_form1 = this;
-                this.Hide();
+                Assign ass = new Assign();
+                ass.login_ref = this;
+                ass.Show();
+                Hide();
             }
             else
             {
-                MessageBox.Show("You are not authorized to login the system, \ncontact HR for more info","Authorization error");
+                MessageBox.Show("You are not authorized to login the system, \n\tcontact HR for more info","Authorization error");
             }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)

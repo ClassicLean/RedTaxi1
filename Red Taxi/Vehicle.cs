@@ -32,6 +32,8 @@ namespace Red_Taxi
 
         private void Vehicle_Load(object sender, EventArgs e)
         {
+            comboBoxStatus.Text = "";
+            comboBoxVehicle.Text = "";
             Rifrish();
         }
 
@@ -84,45 +86,28 @@ namespace Red_Taxi
                 Van
                 Mini Truck
              * */
-            if (comboBoxVehicle.Text == "Single motorcycle")
+            
+             
+            if (comboBoxVehicle.Text.Equals(""))
             {
-                vehicle_type = 0;
+                //throw error
             }
 
-            else if (comboBoxVehicle.Text == "Tricycle")
+            else 
             {
-                vehicle_type = 1;
+                vehicle_type = comboBoxVehicle.SelectedIndex;
+            }
+            
+
+            if (comboBoxStatus.Text == "")
+            {
+                //throw error
             }
 
-            else if (comboBoxVehicle.Text == "Common")
+            else
             {
-                vehicle_type = 2;
-            }
-
-            else if (comboBoxVehicle.Text == "Van")
-            {
-                vehicle_type = 3;
-            }
-
-            else if (comboBoxVehicle.Text == "Mini Truck")
-            {
-                vehicle_type = 4;
-            }
-
-            if (comboBoxStatus.Text == "Active")
-            {
-                status = 0;
-            }
-
-            else if (comboBoxStatus.Text == "Repair")
-            {
-                status = 1;
-            }
-
-            else if (comboBoxStatus.Text == "Decomission")
-            {
-                status = 2;
-            }
+                status = comboBoxStatus.SelectedIndex ;
+            }   
         }
 
         private void Rifrish()

@@ -37,10 +37,7 @@ namespace Red_Taxi
 
         private void buttonAssign_Click(object sender, EventArgs e)
         {
-            Assign ass = new Assign();
-            ass.reference_to_operator = this;
-            ass.Show();
-            Hide();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace Red_Taxi
 {
     public partial class Assign : Form
     {
-        public Operator reference_to_operator { get; set; }
+        public Form1 login_ref;
         public MySqlConnection conn;
         int vehicle_type = 0;
 
@@ -35,8 +35,8 @@ namespace Red_Taxi
 
         private void Assign_FormClosing(object sender, FormClosingEventArgs e)
         {
-            reference_to_operator.Show();
-            this.Hide();
+            login_ref.Show();
+            Hide();
         }
 
         private void Rifrish()
