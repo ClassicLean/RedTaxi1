@@ -15,8 +15,7 @@ namespace Red_Taxi
     {
         public Form1 login_ref;
         public MySqlConnection conn;
-        int vehicle_type = 0;
-
+        public String[] valuePassed;
         public Assign()
         {
             InitializeComponent();
@@ -101,27 +100,27 @@ namespace Red_Taxi
                 Van
                 Mini Truck
              * */
-            if (comboBoxVehicle.Text == "Single motorcycle")
+            if (comboBoxDriver.Text == "Single motorcycle")
             {
                 vehicle_type = 0;
             }
 
-            else if (comboBoxVehicle.Text == "Tricycle")
+            else if (comboBoxDriver.Text == "Tricycle")
             {
                 vehicle_type = 1;
             }
 
-            else if (comboBoxVehicle.Text == "Common")
+            else if (comboBoxDriver.Text == "Common")
             {
                 vehicle_type = 2;
             }
 
-            else if (comboBoxVehicle.Text == "Van")
+            else if (comboBoxDriver.Text == "Van")
             {
                 vehicle_type = 3;
             }
 
-            else if (comboBoxVehicle.Text == "Mini Truck")
+            else if (comboBoxDriver.Text == "Mini Truck")
             {
                 vehicle_type = 4;
             }
@@ -163,5 +162,49 @@ namespace Red_Taxi
                 conn.Close();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonVSel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            dialogSel sakyanan = new dialogSel(this);
+            sakyanan.Show();
+        }
+        public void onlySelSHouldCall()
+        {
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
