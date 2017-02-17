@@ -51,4 +51,5 @@ C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Vehicle.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.csproj.GenerateResource.Cache
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.exe
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.pdb
-C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\bin\Debug\Red Taxi.exe.CodeAnalysisLog.xml
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\bin\Debug\Red Taxi.exe.lastcodeanalysissucceeded
