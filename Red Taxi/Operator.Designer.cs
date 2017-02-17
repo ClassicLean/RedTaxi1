@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.buttonAssign = new System.Windows.Forms.Button();
-            this.buttonLogout = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // buttonAssign
@@ -43,38 +42,13 @@
             this.buttonAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAssign.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssign.ForeColor = System.Drawing.Color.White;
-            this.buttonAssign.Location = new System.Drawing.Point(70, 71);
+            this.buttonAssign.Location = new System.Drawing.Point(74, 74);
             this.buttonAssign.Name = "buttonAssign";
             this.buttonAssign.Size = new System.Drawing.Size(75, 58);
             this.buttonAssign.TabIndex = 0;
             this.buttonAssign.Text = "Assign";
             this.buttonAssign.UseVisualStyleBackColor = false;
             this.buttonAssign.Click += new System.EventHandler(this.buttonAssign_Click);
-            // 
-            // buttonLogout
-            // 
-            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
-            this.buttonLogout.FlatAppearance.BorderSize = 0;
-            this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            this.buttonLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
-            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogout.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(114, 211);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogout.TabIndex = 1;
-            this.buttonLogout.Text = "Logout";
-            this.buttonLogout.UseVisualStyleBackColor = false;
-            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
-            this.panel2.Location = new System.Drawing.Point(255, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(29, 264);
-            this.panel2.TabIndex = 8;
             // 
             // panel1
             // 
@@ -84,15 +58,22 @@
             this.panel1.Size = new System.Drawing.Size(18, 264);
             this.panel1.TabIndex = 8;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
+            this.panel2.Location = new System.Drawing.Point(266, -3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(18, 264);
+            this.panel2.TabIndex = 9;
+            // 
             // Operator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.buttonLogout);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonAssign);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Operator";
@@ -107,8 +88,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonAssign;
-        private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
