@@ -21,7 +21,7 @@ namespace Red_Taxi
         public Vehicle()
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=10.4.42.236;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
 
         }
 
@@ -37,13 +37,13 @@ namespace Red_Taxi
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void Vehicle_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference_to_HR.Show();
-            this.Hide();
+            Hide();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -174,7 +174,7 @@ namespace Red_Taxi
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            upDialogue ups=new upDialogue(this, 1);
         }
     }
 }

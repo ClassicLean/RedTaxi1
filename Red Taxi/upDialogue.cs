@@ -12,9 +12,25 @@ namespace Red_Taxi
 {
     public partial class upDialogue : Form
     {
-        public upDialogue()
+        Form z;
+        int choice;
+        public upDialogue(Form x, int number)
         {
             InitializeComponent();
+            z = x;
+            choice = number;
+        }
+
+        private void upDialogue_Load(object sender, EventArgs e)
+        {
+            if(choice==1)
+            {
+                panel2.Hide();
+            }
+            else
+            {
+                panel1.Hide();
+            }
         }
     }
 }

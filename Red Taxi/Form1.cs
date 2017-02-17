@@ -89,6 +89,10 @@ namespace Red_Taxi
                 operate.reference_to_form1 = this;
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("You are not authorized to login the system, \ncontact HR for more info","Authorization error");
+            }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

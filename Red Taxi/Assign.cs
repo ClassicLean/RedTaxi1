@@ -151,5 +151,17 @@ namespace Red_Taxi
                 conn.Close();
             }
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to mark this assignemnt complete?'", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (r == DialogResult.Yes)
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP", conn);
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
     }
 }

@@ -68,6 +68,7 @@
             this.buttonInsert.TabIndex = 0;
             this.buttonInsert.Text = "Insert";
             this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
@@ -256,7 +257,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(105, 349);
+            this.textBox4.Location = new System.Drawing.Point(105, 352);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 14);
             this.textBox4.TabIndex = 21;
