@@ -41,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -50,7 +49,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -196,7 +194,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.comboBox3);
-            this.panel2.Controls.Add(this.textBox5);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.comboBox2);
@@ -205,7 +202,6 @@
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
@@ -222,19 +218,10 @@
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(122, 211);
+            this.comboBox3.Location = new System.Drawing.Point(123, 186);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 40;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(123, 184);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 13);
-            this.textBox5.TabIndex = 39;
             // 
             // textBox4
             // 
@@ -302,20 +289,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 219);
+            this.label10.Location = new System.Drawing.Point(31, 194);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 31;
             this.label10.Text = "Status:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 187);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Employee Code:";
             // 
             // label7
             // 
@@ -407,7 +385,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -416,7 +393,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;

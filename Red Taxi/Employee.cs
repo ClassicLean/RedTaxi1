@@ -18,11 +18,13 @@ namespace Red_Taxi
         public Employee()
         {
             InitializeComponent();
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void Employee_Load(object sender, EventArgs e)
         {
-
+            comboBox1.Text = "";
+            comboBox2.Text = "";
         }
 
         private void Employee_FormClosing(object sender, FormClosingEventArgs e)
@@ -41,13 +43,20 @@ namespace Red_Taxi
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("INSERT INTO employee(eName,eType,eBday,eLicense,eCivStatus,uName,pWord,eStatus) VALUES('" +
-                    textBox1.Text + "','" + comboBox1.SelectedIndex + "','" +
-                    dateTimePicker1.Value.ToString("YYYY-MM-DD") + "','" + textBox2.Text + "','" +
-                    comboBox2.SelectedIndex + "','" + textBox3.Text + "','" + textBox4.Text + "','" + 
-                    textBox5.Text +"','" + comboBox3.SelectedIndex + "')", conn);                
+                MySqlCommand comm = new MySqlCommand("INSERT INTO employee "+
+                    "VALUES(NULL, '" + textBox1.Text + "','" + comboBox1.SelectedIndex + "','" +
+                    dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + textBox2.Text + "','" +
+                    comboBox2.SelectedIndex + "','" + textBox3.Text + "','" + textBox4.Text + "','" +
+                    "0')", conn);                
                 comm.ExecuteNonQuery();
                 conn.Close();
+                textBox1.Clear();
+                comboBox1.Text = "";
+                comboBox2.Text = "";
+                dateTimePicker1.Value= DateTime.Now;
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
             }
             catch(Exception exx)
             {

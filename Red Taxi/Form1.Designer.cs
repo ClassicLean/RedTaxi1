@@ -44,8 +44,8 @@
             // 
             this.textBoxUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.textBoxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUser.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUser.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxUser.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.textBoxUser.HideSelection = false;
             this.textBoxUser.Location = new System.Drawing.Point(122, 153);
             this.textBoxUser.Name = "textBoxUser";
@@ -53,22 +53,26 @@
             this.textBoxUser.TabIndex = 1;
             this.textBoxUser.Text = "Username";
             this.textBoxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxUser_MouseClick);
             this.textBoxUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
+            this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
+            this.textBoxUser.Leave += new System.EventHandler(this.textBoxUser_Leave);
             // 
             // textBoxPass
             // 
             this.textBoxPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.textBoxPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPass.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPass.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxPass.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.textBoxPass.Location = new System.Drawing.Point(122, 179);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(72, 14);
             this.textBoxPass.TabIndex = 2;
             this.textBoxPass.Text = "Password";
             this.textBoxPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxPass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPass_MouseClick);
+            this.textBoxPass.Enter += new System.EventHandler(this.textBoxPass_Enter);
+            this.textBoxPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPass_KeyDown);
+            this.textBoxPass.Leave += new System.EventHandler(this.textBoxPass_Leave);
             // 
             // button1
             // 

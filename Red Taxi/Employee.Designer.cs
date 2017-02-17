@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,8 +39,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,8 +46,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,21 +65,6 @@
             this.buttonInsert.Text = "Insert";
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
-            this.buttonUpdate.FlatAppearance.BorderSize = 0;
-            this.buttonUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            this.buttonUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(93, 508);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 1;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // buttonLogout
             // 
@@ -181,24 +162,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Password:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 378);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Employee Code:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 410);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Status:";
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
@@ -211,8 +174,13 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "HR",
+            "Operator",
+            "Driver"});
             this.comboBox1.Location = new System.Drawing.Point(105, 219);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
@@ -237,8 +205,14 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Divorced",
+            "Widowed"});
             this.comboBox2.Location = new System.Drawing.Point(105, 298);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -262,24 +236,20 @@
             this.textBox4.Size = new System.Drawing.Size(100, 14);
             this.textBox4.TabIndex = 21;
             // 
-            // textBox5
+            // buttonUpdate
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(105, 375);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 14);
-            this.textBox5.TabIndex = 22;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(104, 402);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 23;
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonUpdate.FlatAppearance.BorderSize = 0;
+            this.buttonUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdate.Location = new System.Drawing.Point(93, 508);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 1;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // Employee
             // 
@@ -287,8 +257,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(324, 541);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.comboBox2);
@@ -296,8 +264,6 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -328,7 +294,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonInsert;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -339,8 +304,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -348,7 +311,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

@@ -15,7 +15,7 @@ namespace Red_Taxi
         public MySqlConnection conn;
         public HR reference_to_HR { get; set; }
         public Operator reference_to_operator { get; set; }
-
+        private bool userCheck=true, passCheck = true;
         public Form1()
         {
             InitializeComponent();
@@ -118,16 +118,6 @@ namespace Red_Taxi
             }
         }
 
-        private void textBoxUser_MouseClick(object sender, MouseEventArgs e)
-        {
-            textBoxUser.Text = "";
-        }
-
-        private void textBoxPass_MouseClick(object sender, MouseEventArgs e)
-        {
-            textBoxPass.Text = "";
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
@@ -136,6 +126,60 @@ namespace Red_Taxi
         private void button3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBoxUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button1_Click(this, new EventArgs());
+        }
+
+        private void textBoxUser_Enter(object sender, EventArgs e)
+        {
+            if (userCheck)
+            {
+                textBoxUser.Text = "";
+                textBoxUser.Font = new Font("Roboto", 8, FontStyle.Regular);
+                textBoxUser.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxPass_Enter(object sender, EventArgs e)
+        {
+            if (passCheck)
+            {
+                textBoxPass.Text = "";
+                textBoxPass.Font = new Font("Roboto", 8, FontStyle.Regular);
+                textBoxPass.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxUser_Leave(object sender, EventArgs e)
+        {
+            userCheck = textBoxUser.Text.Equals("");
+            if (userCheck)
+            {
+                textBoxUser.Text = "Username";
+                textBoxUser.Font = new Font("Roboto Light", 8, FontStyle.Italic);
+                textBoxUser.ForeColor = Color.FromArgb(148, 165, 165);
+            }
+        }
+
+        private void textBoxPass_Leave(object sender, EventArgs e)
+        {
+            passCheck = textBoxPass.Text.Equals("");
+            if (passCheck)
+            {
+                textBoxPass.Text = "Password";
+                textBoxPass.Font = new Font("Roboto Light", 8, FontStyle.Italic);
+                textBoxPass.ForeColor = Color.FromArgb(148, 165, 165);
+            }
+        }
+
+        private void textBoxPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                button1_Click(this, new EventArgs());
         }
     }
 }
