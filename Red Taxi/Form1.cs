@@ -19,7 +19,7 @@ namespace Red_Taxi
         public Form1()
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=10.4.42.236;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void Form1_Load(object sender, EventArgs e)

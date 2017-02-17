@@ -171,5 +171,10 @@ namespace Red_Taxi
                 Rifrish();
             }
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

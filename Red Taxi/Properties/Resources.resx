@@ -117,11 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="logo1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARYAAADCCAYAAACMle3CAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAB9hSURBVHhe7Z0x
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAAB9hSURBVHhe7Z0x
         jB1HcoYVOFBwgQMHF1xwwQUOHFxwgQIDa4BveQoUOOABNI6cccBAAYMLFChgYECBAgUMGDBQwEAGFDBg
         oIAwGCxgAkccyNX6cAcoYCAYDNbA2hYM2SbgtSHX390zUzP73pueme6ennl/8CBq30zPvJ6qb6qqq6ve
         OT0u/+6HH354J7fP2S/Ln55eK9//+rh4+PVxeSGfH/TndFM+/t1R+ePc7pv3k58shXomZ8fl31YyCPkM
@@ -262,7 +266,7 @@
   <data name="logo11" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARYAAADCCAYAAACMle3CAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAABrNSURBVHhe7Z1P
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMzQDW3oAABrNSURBVHhe7Z1P
         qCXV8cddZpllIAvht9FFMAshWSQyzkz3HdBkIZJF8L3u+4REmU0Ss3AxiyASgoILN0okC8WFDrgY4mQh
         0UQwgkzufXeehpGfTGB+OGBgJszLYjYPwvtVdd9+3ttdfft0d50/3fe7uAz6uk93n1P1OVV1zqm6Zz9O
         j+l3ex4lX/r48bOX78DvYfaLkrvzePeZ4+Pje/BDHyzOpg9XZWd6HrLhTzbuyQfE/yDMTz9579Voem5/
@@ -379,5 +383,8 @@
         ELMVZivIAGQAYMFsBRmADKjLgHqDmK0wW0EGIAMAC2YryABkQF0G1BvEbIXZCjIAGQBYMFtBBiAD6jKg
         3iBmK8xWkAHIwP8Dzslhf40oEgwAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="list1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

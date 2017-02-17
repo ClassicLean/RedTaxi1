@@ -43,9 +43,9 @@
             this.buttonAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAssign.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAssign.ForeColor = System.Drawing.Color.White;
-            this.buttonAssign.Location = new System.Drawing.Point(101, 41);
+            this.buttonAssign.Location = new System.Drawing.Point(70, 71);
             this.buttonAssign.Name = "buttonAssign";
-            this.buttonAssign.Size = new System.Drawing.Size(75, 23);
+            this.buttonAssign.Size = new System.Drawing.Size(75, 58);
             this.buttonAssign.TabIndex = 0;
             this.buttonAssign.Text = "Assign";
             this.buttonAssign.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(101, 70);
+            this.buttonLogout.Location = new System.Drawing.Point(114, 211);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(75, 23);
             this.buttonLogout.TabIndex = 1;
@@ -71,9 +71,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
-            this.panel2.Location = new System.Drawing.Point(266, 0);
+            this.panel2.Location = new System.Drawing.Point(255, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(18, 264);
+            this.panel2.Size = new System.Drawing.Size(29, 264);
             this.panel2.TabIndex = 8;
             // 
             // panel1

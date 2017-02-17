@@ -46,6 +46,7 @@ C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Form1.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.HR.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Operator.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Properties.Resources.resources
+C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.upDialogue.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red_Taxi.Vehicle.resources
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.csproj.GenerateResource.Cache
 C:\Users\user\Downloads\RedTaxi1\Red Taxi\obj\Debug\Red Taxi.exe

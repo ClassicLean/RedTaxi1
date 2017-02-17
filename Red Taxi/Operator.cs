@@ -32,7 +32,7 @@ namespace Red_Taxi
         private void Operator_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference_to_form1.Show();
-            this.Hide();
+            //Hide();
         }
 
         private void buttonAssign_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Red_Taxi
             Assign ass = new Assign();
             ass.reference_to_operator = this;
             ass.Show();
-            this.Hide();
+            Hide();
         }
     }
 }
