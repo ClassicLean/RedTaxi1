@@ -117,7 +117,7 @@ namespace Red_Taxi
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
                 dataGridView1.DataSource = dt;
-
+                dataGridView1.Columns["vID"].Visible = false;
                 conn.Close();
             }
             catch (Exception ee)

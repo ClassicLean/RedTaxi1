@@ -143,7 +143,8 @@ namespace Red_Taxi
             if (passCheck)
             {
                 textBoxPass.Text = "";
-                textBoxPass.Font = new Font("Roboto", 8, FontStyle.Regular);
+                textBoxPass.Font = new Font("Wingdings", 8, FontStyle.Regular);
+                textBoxPass.PasswordChar = 'l';
                 textBoxPass.ForeColor = Color.DimGray;
             }
         }
@@ -165,6 +166,7 @@ namespace Red_Taxi
             if (passCheck)
             {
                 textBoxPass.Text = "Password";
+                textBoxPass.PasswordChar='\0';
                 textBoxPass.Font = new Font("Roboto Light", 8, FontStyle.Italic);
                 textBoxPass.ForeColor = Color.FromArgb(148, 165, 165);
             }
