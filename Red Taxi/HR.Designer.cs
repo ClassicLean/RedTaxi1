@@ -33,10 +33,9 @@
             this.buttonVehicle = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
@@ -86,9 +85,9 @@
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(159, 130);
+            this.buttonLogout.Location = new System.Drawing.Point(0, 46);
             this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogout.Size = new System.Drawing.Size(137, 41);
             this.buttonLogout.TabIndex = 2;
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = false;
@@ -100,16 +99,8 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(18, 264);
+            this.panel2.Size = new System.Drawing.Size(27, 264);
             this.panel2.TabIndex = 7;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
-            this.panel1.Location = new System.Drawing.Point(374, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(18, 264);
-            this.panel1.TabIndex = 8;
             // 
             // button2
             // 
@@ -130,32 +121,24 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
+            this.panel1.Location = new System.Drawing.Point(374, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(18, 264);
+            this.panel1.TabIndex = 8;
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.buttonLogout);
             this.panel3.Location = new System.Drawing.Point(0, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(136, 191);
+            this.panel3.Size = new System.Drawing.Size(136, 190);
             this.panel3.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 41);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -166,12 +149,13 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 93);
+            this.button3.Location = new System.Drawing.Point(3, 93);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(134, 40);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Logout";
+            this.button3.Text = "Quit";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // timer1
             // 
@@ -186,7 +170,6 @@
             this.ClientSize = new System.Drawing.Size(392, 261);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonVehicle);
             this.Controls.Add(this.buttonEmp);
             this.Controls.Add(this.panel3);
@@ -211,7 +194,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;
     }

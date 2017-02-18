@@ -16,12 +16,14 @@ namespace Red_Taxi
         Form z;
         int choice;
         DataGridViewCellCollection yawaka;
+        MySqlConnection conn;
         public upDialogue(Form x, int number,DataGridViewCellCollection LAMAN)
         {
             InitializeComponent();
             z = x;
             choice = number;
             yawaka = LAMAN;
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void upDialogue_Load(object sender, EventArgs e)
@@ -48,7 +50,22 @@ namespace Red_Taxi
         {
             if(choice==1)
             {
-                ///textBoxPNumber.Text;
+                try
+                {
+                    conn.Open();
+                    MySqlCommand comm = new MySqlCommand("UPDATE vehicles SET plateNum='" + textBox1.Text + "',vehicleType='" +
+                        textBox2.Text + "',chasisNumber='" + textBox5.Text + "',boundaryAmount='" + textBox6.Text + "',vStatus='" +
+                        textBox7.Text   + " WHERE account_id=" + idLamao, conn);
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                    Rifrish();
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show("Please contact ...");
+                    conn.Close();
+                }
+                textBoxPNumber.Text
 
             }
         }
