@@ -53,9 +53,9 @@ namespace Red_Taxi
                 try
                 {
                     conn.Open();
-                    MySqlCommand comm = new MySqlCommand("UPDATE vehicles SET plateNum='" + textBox1.Text + "',vehicleType='" +
-                        textBox2.Text + "',chasisNumber='" + textBox5.Text + "',boundaryAmount='" + textBox6.Text + "',vStatus='" +
-                        textBox7.Text   + " WHERE account_id=" + idLamao, conn);
+                    MySqlCommand comm = new MySqlCommand("UPDATE vehicles SET plateNum='" + textBoxPNumber.Text + "',vehicleType='" +
+                        comboBoxVehicle.SelectedIndex+ "',chasisNumber='" + textBoxCNumber.Text + "',boundaryAmount='" + textBoxBAmount.Text + "',vStatus=" +
+                        comboBoxStatus.SelectedIndex  + " WHERE vID=" + yawaka["vID"].Value.ToString(), conn);
                     comm.ExecuteNonQuery();
                     conn.Close();
                     Rifrish();
