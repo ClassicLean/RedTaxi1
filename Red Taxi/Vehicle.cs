@@ -17,7 +17,7 @@ namespace Red_Taxi
         public MySqlConnection conn;
         int vehicle_type = 0;
         int status = 0;
-
+        int SearchType = 0;
         public Vehicle()
         {
             InitializeComponent();
@@ -60,11 +60,17 @@ namespace Red_Taxi
                     conn.Open();
                     MySqlCommand comm = new MySqlCommand("INSERT INTO vehicles(plateNum,vehicleType,chasisNumber,boundaryAmount, vStatus) VALUES('" + 
                         textBoxPNumber.Text + "','" + vehicle_type + "','" + 
-                        textBoxCNumber.Text + "','" + textBoxBAmount.Text + "','" + 
-                        status + "')", conn);
+                        textBoxCNumber.Text + "','" + textBoxBAmount.Text + "',0)", conn);
                     comm.ExecuteNonQuery();
 
                     conn.Close();
+                    textBoxPNumber.Clear();
+                    comboBoxVehicle.SelectedIndex = 0;
+                    textBoxBAmount.Clear();
+                    textBoxCNumber.Clear();
+                    comboBoxStatus.SelectedIndex = 0;
+                    comboBoxVehicle.Text = "";
+                    comboBoxStatus.Text = "";
                 }
                 Rifrish();
             }
@@ -88,26 +94,17 @@ namespace Red_Taxi
              * */
             
              
-            if (comboBoxVehicle.Text.Equals(""))
+            if (comboBoxVehicle.Text.Equals("") || comboBoxStatus.Text.Equals("")|| textBoxCNumber.Text.Equals("")|| textBoxPNumber.Text.Equals("")|| textBoxBAmount.Text.Equals(""))
             {
-                //throw error
+                MessageBox.Show("Please input values in all fields");
+                throw new Exception("jepoydhizon");
             }
 
             else 
             {
                 vehicle_type = comboBoxVehicle.SelectedIndex;
+                status = comboBoxStatus.SelectedIndex;
             }
-            
-
-            if (comboBoxStatus.Text == "")
-            {
-                //throw error
-            }
-
-            else
-            {
-                status = comboBoxStatus.SelectedIndex ;
-            }   
         }
 
         private void Rifrish()
@@ -137,7 +134,7 @@ namespace Red_Taxi
                 try
                 {
                     conn.Open();
-                    MySqlCommand comm = new MySqlCommand("SELECT * FROM vehicles WHERE vehicleType = " + textBoxSearch.Text, conn);
+                    MySqlCommand comm = new MySqlCommand("SELECT * FROM vehicles WHERE plateNum LIKE '" + textBoxSearch.Text+"%'", conn);
                     MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
@@ -157,9 +154,38 @@ namespace Red_Taxi
             }
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void comboBoxSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
-            upDialogue ups=new upDialogue(this, 1);
+            SearchType = comboBoxSearch.SelectedIndex;
+            comboBox1.Visible = SearchType == 1;
+            textBoxSearch.Clear();
+            textBoxSearch.Visible = SearchType != 1;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM vehicles WHERE vehicleType =" + comboBox1.SelectedIndex, conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            upDialogue ups = new upDialogue(this, 1, dataGridView1.Rows[e.RowIndex].Cells);
+            ups.Show();
+            Hide();
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Red_Taxi
             {
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand("INSERT INTO employee "+
-                    "VALUES(NULL, '" + textBox1.Text + "','" + comboBox1.SelectedIndex + "','" +
+                    "VALUES(NULL, '" + textBox1.Text.ToLower() + "','" + comboBox1.SelectedIndex + "','" +
                     dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + textBox2.Text + "','" +
                     comboBox2.SelectedIndex + "','" + textBox3.Text + "','" + textBox4.Text + "','" +
                     "0')", conn);                

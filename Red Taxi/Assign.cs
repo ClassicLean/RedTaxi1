@@ -62,12 +62,12 @@ namespace Red_Taxi
         {
 
         }
-
         private void buttonRecord_Click(object sender, EventArgs e)
         {
             
             try
             {
+                /*
                 DialogResult r = MessageBox.Show("Do you want to record driver '" + textBoxDriver.Text + "'?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (r == DialogResult.Yes)
@@ -79,7 +79,7 @@ namespace Red_Taxi
                     comm.ExecuteNonQuery();
 
                     conn.Close();
-                }
+                }*/
                 Rifrish();
             }
 
@@ -99,7 +99,7 @@ namespace Red_Taxi
                 Common
                 Van
                 Mini Truck
-             * */
+             * *//*
             if (comboBoxDriver.Text == "Single motorcycle")
             {
                 vehicle_type = 0;
@@ -123,9 +123,8 @@ namespace Red_Taxi
             else if (comboBoxDriver.Text == "Mini Truck")
             {
                 vehicle_type = 4;
-            }
+            }*/
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
