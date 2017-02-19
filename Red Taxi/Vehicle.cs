@@ -104,11 +104,9 @@ namespace Red_Taxi
             {
                 vehicle_type = comboBoxVehicle.SelectedIndex;
                 status = comboBoxStatus.SelectedIndex;
-            }
-
-            if()
+            }   
         }
-
+            
         private void Rifrish()
         {
             try
@@ -131,6 +129,12 @@ namespace Red_Taxi
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
+            if (comboBoxSearch.Text.Equals(""))
+            {
+                comboBoxSearch.SelectedIndexChanged -= new EventHandler(comboBoxSearch_SelectedIndexChanged);
+                comboBoxSearch.SelectedIndex = 0;
+                comboBoxSearch.SelectedIndexChanged += new EventHandler(comboBoxSearch_SelectedIndexChanged);
+            }
             if (textBoxSearch.Text != "")
             {
                 try
@@ -185,14 +189,40 @@ namespace Red_Taxi
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            upDialogue ups = new upDialogue(this, 1, dataGridView1.Rows[e.RowIndex].Cells);
+            upDialogue ups = new upDialogue(this, true, dataGridView1.Rows[e.RowIndex].Cells);
             ups.Show();
             Hide();
         }
 
         private void textBoxBAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //e.KeyChar
+            
+        }
+
+        private void Vehicle_VisibleChanged(object sender, EventArgs e)
+        {
+            Rifrish();
+        }
+
+        private void textBoxBAmount_KeyDown(object sender, KeyEventArgs e)
+        {
+            bool taning = false;
+            int[] luhkadiha = new int [22];
+            for (int x = 0; x < 10; x++)
+            {
+                luhkadiha[x] = x + 48;
+                luhkadiha[x + 10] = x + 96;
+            }
+            luhkadiha[20] = 190;
+            luhkadiha[21] = 110;
+
+            foreach(int x in luhkadiha)
+            {
+                textBoxCNumber.Text = textBoxCNumber.Text + x;
+                if(x == e.KeyValue && !taning)
+                    taning = !taning;
+            }
+            e.SuppressKeyPress = !taning;
         }
     }
 }

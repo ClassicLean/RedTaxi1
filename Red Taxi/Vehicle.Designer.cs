@@ -60,7 +60,7 @@
             this.buttonInsert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonInsert.Location = new System.Drawing.Point(249, 339);
+            this.buttonInsert.Location = new System.Drawing.Point(267, 339);
             this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(74, 23);
@@ -72,23 +72,24 @@
             // buttonLogout
             // 
             this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonLogout.FlatAppearance.BorderSize = 0;
             this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.buttonLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(411, 339);
+            this.buttonLogout.Location = new System.Drawing.Point(405, 339);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(74, 23);
-            this.buttonLogout.TabIndex = 8;
+            this.buttonLogout.TabIndex = 7;
             this.buttonLogout.Text = "Back";
             this.buttonLogout.UseVisualStyleBackColor = false;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.textBoxSearch.BackColor = System.Drawing.Color.White;
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Location = new System.Drawing.Point(220, 12);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -127,12 +128,13 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(300, 150);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 199);
+            this.label1.Location = new System.Drawing.Point(264, 199);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
@@ -142,7 +144,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(217, 310);
+            this.label8.Location = new System.Drawing.Point(264, 307);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
@@ -152,24 +154,25 @@
             // 
             // textBoxPNumber
             // 
-            this.textBoxPNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.textBoxPNumber.BackColor = System.Drawing.Color.White;
             this.textBoxPNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPNumber.Location = new System.Drawing.Point(313, 196);
+            this.textBoxPNumber.Location = new System.Drawing.Point(360, 199);
             this.textBoxPNumber.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBoxPNumber.MaxLength = 45;
             this.textBoxPNumber.Name = "textBoxPNumber";
             this.textBoxPNumber.Size = new System.Drawing.Size(121, 13);
             this.textBoxPNumber.TabIndex = 1;
             // 
             // comboBoxStatus
             // 
-            this.comboBoxStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBoxStatus.BackColor = System.Drawing.Color.White;
             this.comboBoxStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Items.AddRange(new object[] {
             "Active",
             "Repair",
             "Decomission"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(313, 307);
+            this.comboBoxStatus.Location = new System.Drawing.Point(360, 303);
             this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(120, 21);
@@ -178,7 +181,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 232);
+            this.label2.Location = new System.Drawing.Point(264, 226);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
@@ -188,7 +191,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(217, 262);
+            this.label3.Location = new System.Drawing.Point(264, 253);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
@@ -197,7 +200,7 @@
             // 
             // comboBoxVehicle
             // 
-            this.comboBoxVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBoxVehicle.BackColor = System.Drawing.Color.White;
             this.comboBoxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxVehicle.FormattingEnabled = true;
             this.comboBoxVehicle.Items.AddRange(new object[] {
@@ -206,7 +209,7 @@
             "Common",
             "Van",
             "Mini Truck"});
-            this.comboBoxVehicle.Location = new System.Drawing.Point(313, 224);
+            this.comboBoxVehicle.Location = new System.Drawing.Point(360, 222);
             this.comboBoxVehicle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxVehicle.Name = "comboBoxVehicle";
             this.comboBoxVehicle.Size = new System.Drawing.Size(120, 21);
@@ -214,10 +217,11 @@
             // 
             // textBoxCNumber
             // 
-            this.textBoxCNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.textBoxCNumber.BackColor = System.Drawing.Color.White;
             this.textBoxCNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCNumber.Location = new System.Drawing.Point(313, 255);
+            this.textBoxCNumber.Location = new System.Drawing.Point(360, 254);
             this.textBoxCNumber.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBoxCNumber.MaxLength = 45;
             this.textBoxCNumber.Name = "textBoxCNumber";
             this.textBoxCNumber.Size = new System.Drawing.Size(121, 13);
             this.textBoxCNumber.TabIndex = 3;
@@ -226,7 +230,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(217, 284);
+            this.label5.Location = new System.Drawing.Point(262, 280);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
@@ -235,13 +239,14 @@
             // 
             // textBoxBAmount
             // 
-            this.textBoxBAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.textBoxBAmount.BackColor = System.Drawing.Color.White;
             this.textBoxBAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBAmount.Location = new System.Drawing.Point(313, 281);
+            this.textBoxBAmount.Location = new System.Drawing.Point(360, 280);
             this.textBoxBAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxBAmount.Name = "textBoxBAmount";
             this.textBoxBAmount.Size = new System.Drawing.Size(121, 13);
             this.textBoxBAmount.TabIndex = 4;
+            this.textBoxBAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxBAmount_KeyDown);
             this.textBoxBAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBAmount_KeyPress);
             // 
             // panel2
@@ -278,7 +283,8 @@
             // 
             // comboBoxSearch
             // 
-            this.comboBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBoxSearch.BackColor = System.Drawing.Color.White;
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Items.AddRange(new object[] {
@@ -288,12 +294,12 @@
             this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(120, 21);
-            this.comboBoxSearch.TabIndex = 2;
+            this.comboBoxSearch.TabIndex = 1;
             this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearch_SelectedIndexChanged);
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -306,7 +312,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 2;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -315,6 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.CancelButton = this.buttonLogout;
             this.ClientSize = new System.Drawing.Size(528, 379);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBoxBAmount);
@@ -343,6 +350,7 @@
             this.Text = "Vehicle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vehicle_FormClosing);
             this.Load += new System.EventHandler(this.Vehicle_Load);
+            this.VisibleChanged += new System.EventHandler(this.Vehicle_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

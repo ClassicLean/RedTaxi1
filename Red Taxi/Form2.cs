@@ -21,20 +21,13 @@ namespace Red_Taxi
             InitializeComponent();
             upper = x;
             conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
-            MySqlCommand comm;
-            conn.Open();
-            comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vehicles.vID NOT IN(SELECT * FROM oncall WHERE oncall.status=0);", conn);
-            MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-            DataTable dt = new DataTable();
-            adp.Fill(dt);
-            dataGridView1.DataSource = dt;
-            conn.Close();
         }
 
         private void comboBoxVehicle_SelectedIndexChanged(object sender, EventArgs e)
         {
             SearchType = comboBoxVehicle.SelectedIndex;
             comboBox1.Visible = SearchType == 2;
+            comboBox1.SelectedIndex = 0;
             textBoxSearch.Clear();
             textBoxSearch.Visible = SearchType != 2;
         }
@@ -56,14 +49,11 @@ namespace Red_Taxi
                         case 1:
                             searchMaster3000 = "chasisNumber LIKE '" +textBoxSearch.Text + "%'";
                             break;
-                        case 2:
-                            searchMaster3000 = "vehicleType = " +textBoxSearch.Text;
-                            break;
                         default:
                             throw new Exception();
                     }
                     comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE "+searchMaster3000+" AND "+
-                        "vStatus=0 AND vID NOT IN(SELECT * FROM oncall WHERE status=0);", conn);
+                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
                     MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
@@ -80,7 +70,7 @@ namespace Red_Taxi
             {
                 MySqlCommand comm;
                 conn.Open();
-                comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vehicles.vID NOT IN(SELECT * FROM oncall WHERE oncall.status=0);", conn);
+                comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vID IN (select eVehicle from employee) AND vehicles.vID NOT IN (select vehicle from oncall where status = 1)", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -105,6 +95,45 @@ namespace Red_Taxi
             upper.valuePassed = Results;
             upper.onlySelSHouldCall();
             button2_Click(sender, e);
+        }
+
+        private void dialogSel_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("select * from vehicles where vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vehicleType = " + comboBox1.SelectedIndex + " AND " +
+                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
         }
     }
 }

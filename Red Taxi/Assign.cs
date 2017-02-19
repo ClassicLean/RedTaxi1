@@ -175,35 +175,24 @@ namespace Red_Taxi
         }
         public void onlySelSHouldCall()
         {
-
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("SELECT eName FROM employee WHERE eVehicle = " + valuePassed[0], conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                comboBoxDriver.DisplayMember = "eName";
+                comboBoxDriver.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+            textBox1.Text = valuePassed[1];
+            comboBoxDriver.Enabled = true;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

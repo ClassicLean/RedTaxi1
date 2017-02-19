@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonRecord = new System.Windows.Forms.Button();
             this.buttonView = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
@@ -41,13 +41,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonVSel = new System.Windows.Forms.Button();
             this.comboBoxDriver = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVSel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,6 +106,7 @@
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.BackColor = System.Drawing.Color.White;
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Location = new System.Drawing.Point(95, 2);
             this.textBoxSearch.Name = "textBoxSearch";
@@ -140,8 +143,10 @@
             // 
             // textBoxNote
             // 
+            this.textBoxNote.BackColor = System.Drawing.Color.White;
             this.textBoxNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNote.Location = new System.Drawing.Point(67, 89);
+            this.textBoxNote.MaxLength = 45;
             this.textBoxNote.Multiline = true;
             this.textBoxNote.Name = "textBoxNote";
             this.textBoxNote.Size = new System.Drawing.Size(121, 58);
@@ -167,14 +172,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
             this.dataGridView1.Location = new System.Drawing.Point(2, 32);
@@ -213,17 +218,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Welcome";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 35);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Operator";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -235,62 +229,16 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Abdlulmajid";
             // 
-            // panel1
+            // label6
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBoxSearch);
-            this.panel1.Location = new System.Drawing.Point(408, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 209);
-            this.panel1.TabIndex = 24;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBoxNote);
-            this.panel3.Controls.Add(this.comboBoxDriver);
-            this.panel3.Controls.Add(this.buttonVSel);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(174, 77);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(203, 150);
-            this.panel3.TabIndex = 25;
-            // 
-            // buttonVSel
-            // 
-            this.buttonVSel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
-            this.buttonVSel.FlatAppearance.BorderSize = 0;
-            this.buttonVSel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
-            this.buttonVSel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
-            this.buttonVSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVSel.ForeColor = System.Drawing.Color.White;
-            this.buttonVSel.Location = new System.Drawing.Point(69, 30);
-            this.buttonVSel.Name = "buttonVSel";
-            this.buttonVSel.Size = new System.Drawing.Size(119, 20);
-            this.buttonVSel.TabIndex = 4;
-            this.buttonVSel.Text = "Select";
-            this.buttonVSel.UseVisualStyleBackColor = false;
-            this.buttonVSel.Click += new System.EventHandler(this.buttonVSel_Click);
-            // 
-            // comboBoxDriver
-            // 
-            this.comboBoxDriver.Enabled = false;
-            this.comboBoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxDriver.FormattingEnabled = true;
-            this.comboBoxDriver.Items.AddRange(new object[] {
-            "",
-            "Single motorcycle",
-            "Tricycle",
-            "Common",
-            "Van",
-            "Mini Truck"});
-            this.comboBoxDriver.Location = new System.Drawing.Point(67, 58);
-            this.comboBoxDriver.Name = "comboBoxDriver";
-            this.comboBoxDriver.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxDriver.TabIndex = 1;
-            this.comboBoxDriver.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(23, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 35);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Operator";
             // 
             // button1
             // 
@@ -307,6 +255,95 @@
             this.button1.Text = "Quit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBoxSearch);
+            this.panel1.Location = new System.Drawing.Point(408, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(322, 209);
+            this.panel1.TabIndex = 24;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.textBoxNote);
+            this.panel3.Controls.Add(this.comboBoxDriver);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.buttonVSel);
+            this.panel3.Location = new System.Drawing.Point(174, 77);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(203, 183);
+            this.panel3.TabIndex = 25;
+            // 
+            // comboBoxDriver
+            // 
+            this.comboBoxDriver.BackColor = System.Drawing.Color.White;
+            this.comboBoxDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDriver.Enabled = false;
+            this.comboBoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxDriver.FormattingEnabled = true;
+            this.comboBoxDriver.Items.AddRange(new object[] {
+            "",
+            "Single motorcycle",
+            "Tricycle",
+            "Common",
+            "Van",
+            "Mini Truck"});
+            this.comboBoxDriver.Location = new System.Drawing.Point(67, 58);
+            this.comboBoxDriver.Name = "comboBoxDriver";
+            this.comboBoxDriver.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDriver.TabIndex = 1;
+            this.comboBoxDriver.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // buttonVSel
+            // 
+            this.buttonVSel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonVSel.FlatAppearance.BorderSize = 0;
+            this.buttonVSel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonVSel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonVSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVSel.ForeColor = System.Drawing.Color.White;
+            this.buttonVSel.Location = new System.Drawing.Point(139, 31);
+            this.buttonVSel.Name = "buttonVSel";
+            this.buttonVSel.Size = new System.Drawing.Size(49, 18);
+            this.buttonVSel.TabIndex = 4;
+            this.buttonVSel.Text = "Select";
+            this.buttonVSel.UseVisualStyleBackColor = false;
+            this.buttonVSel.Click += new System.EventHandler(this.buttonVSel_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(68, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(70, 14);
+            this.textBox1.TabIndex = 26;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(67, 153);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 27);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Assign";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.buttonRecord_Click);
             // 
             // Assign
             // 
@@ -356,5 +393,7 @@
         private System.Windows.Forms.ComboBox comboBoxDriver;
         private System.Windows.Forms.Button buttonVSel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

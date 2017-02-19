@@ -65,6 +65,7 @@
             this.buttonInsert.TabIndex = 0;
             this.buttonInsert.Text = "Insert";
             this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.VisibleChanged += new System.EventHandler(this.buttonInsert_VisibleChanged);
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonLogout
@@ -275,7 +276,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(300, 150);
             this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Employee
             // 

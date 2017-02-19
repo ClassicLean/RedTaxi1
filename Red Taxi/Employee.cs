@@ -32,6 +32,7 @@ namespace Red_Taxi
         {
             comboBoxeType.Text = "";
             comboBoxcStatus.Text = "";
+            Rifrish();
         }
 
         private void Employee_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,7 +40,26 @@ namespace Red_Taxi
             reference_to_HR.Show();
             this.Hide();
         }
-
+        private void Rifrish()
+        {
+            try
+            {
+                conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["eID"].Visible = false;
+                conn.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+                conn.Close();
+            }
+        }
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -68,6 +88,7 @@ namespace Red_Taxi
                     textBoxlNumber.Clear();
                     textBoxUsername.Clear();
                     textBoxPassword.Clear();
+                    Rifrish();
                 }
             }
             catch (Exception exx)
@@ -98,6 +119,7 @@ namespace Red_Taxi
                 comm.ExecuteNonQuery();
 
                 conn.Close();
+                Rifrish();
             }
         }
 
@@ -110,8 +132,6 @@ namespace Red_Taxi
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt1 = new DataTable();
                 adp.Fill(dt1);
-
-
                 conn.Close();
                 if (uName == textBoxUsername.Text)
                 {
@@ -142,24 +162,24 @@ namespace Red_Taxi
             if (textBoxeName.Text == "" || comboBoxeType.Text == "" || textBoxlNumber.Text == "" 
                 || comboBoxcStatus.Text == "" || textBoxUsername.Text == "" || 
                 textBoxPassword.Text == "" )
-            {
                 MessageBox.Show("Please fill out required fills");
-                return false;
-            }
-
             else
-            {
                 return true;
-            }
+            return false;
 
         }
+        
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = dataGridView1.Rows[e.RowIndex].Cells["eID"].Value.ToString();
-            empName = dataGridView1.Rows[e.RowIndex].Cells["eName"].Value.ToString();
-            uName = dataGridView1.Rows[e.RowIndex].Cells["uName"].Value.ToString();
-            employeeID = int.Parse(id);
+            upDialogue ups = new upDialogue(this, false, dataGridView1.Rows[e.RowIndex].Cells);
+            ups.Show();
+            Hide();
+        }
+
+        private void buttonInsert_VisibleChanged(object sender, EventArgs e)
+        {
+            Rifrish();
         }
     }
 }
