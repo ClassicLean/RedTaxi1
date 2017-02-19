@@ -17,10 +17,11 @@ namespace Red_Taxi
         public MySqlConnection conn;
         public String[] valuePassed;
         int increm = -1;
-        public Assign()
+        public Assign(string b)
         {
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+            label8.Text = b;
         }
 
         private void Assign_Load(object sender, EventArgs e)
@@ -95,19 +96,6 @@ namespace Red_Taxi
             timer1.Start();
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DialogResult r = MessageBox.Show("Do you want to mark this assignemnt complete?'", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (r == DialogResult.Yes)
-            {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP", conn);
-                comm.ExecuteNonQuery();
-                conn.Close();
-                Rifrish();
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -124,7 +112,7 @@ namespace Red_Taxi
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("SELECT eName FROM employee WHERE eVehicle = " + valuePassed[0], conn);
+                MySqlCommand comm = new MySqlCommand("SELECT eName FROM employee WHERE eID NOT IN(SELECT driver FROM oncall where status=0) AND eVehicle = " + valuePassed[0], conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -168,7 +156,7 @@ namespace Red_Taxi
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("SELECT eID FROM employee WHERE eName = '" + comboBoxDriver.SelectedItem.ToString() + "'", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT eID FROM employee WHERE eName = '" + comboBoxDriver.Text + "'", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -181,7 +169,23 @@ namespace Red_Taxi
             }
             catch (Exception eex)
             {
+                MessageBox.Show(eex.ToString());
+            }
+        }
 
+        private void dataGridView1_CellContentDoubleClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells["status"].Value.ToString().Equals("0"))
+            {
+                DialogResult r = MessageBox.Show("Do you want to mark this assignemnt complete?'", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    conn.Open();
+                    MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP", conn);
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                    Rifrish();
+                }
             }
         }
     }

@@ -54,7 +54,7 @@ namespace Red_Taxi
                             throw new Exception();
                     }
                     comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE "+searchMaster3000+" AND "+
-                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
+                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 0)", conn);
                     MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
@@ -103,7 +103,7 @@ namespace Red_Taxi
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("select * from vehicles where vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
+                MySqlCommand comm = new MySqlCommand("select * from vehicles where vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 0)", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -123,7 +123,7 @@ namespace Red_Taxi
             {
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vehicleType = " + comboBox1.SelectedIndex + " AND " +
-                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 1)", conn);
+                        "vStatus=0 AND vID IN (select eVehicle from employee) AND vID NOT IN (select vehicle from oncall where status = 0)", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -135,6 +135,16 @@ namespace Red_Taxi
                 MessageBox.Show(ee.ToString());
                 conn.Close();
             }
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Results.Length > 0)
+            {
+                upper.valuePassed = Results;
+                upper.onlySelSHouldCall();
+            }
+            button2_Click(sender, e);
         }
     }
 }

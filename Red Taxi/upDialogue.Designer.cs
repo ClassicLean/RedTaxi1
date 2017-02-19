@@ -443,7 +443,6 @@
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.TextBox textBoxPNumber;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox3;

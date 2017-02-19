@@ -73,7 +73,12 @@ namespace Red_Taxi
                     comm = new MySqlCommand("UPDATE vehicles SET plateNum='" + textBoxPNumber.Text + "',vehicleType='" +
                         comboBoxVehicle.SelectedIndex + "',chasisNumber='" + textBoxCNumber.Text + "',boundaryAmount='" + textBoxBAmount.Text + "',vStatus=" +
                         comboBoxStatus.SelectedIndex + " WHERE vID=" + vID, conn);
-
+                    comm.ExecuteNonQuery();
+                    if (comboBoxStatus.SelectedIndex!=0)
+                    {
+                        comm = new MySqlCommand("UPDATE oncall set status=1,arrivedTime=CURRENT_TIMESTAMP WHERE vehicle=" + vID, conn);
+                        comm.ExecuteNonQuery();
+                    }
                 }
                 else
                 {
@@ -82,8 +87,13 @@ namespace Red_Taxi
                     dateTimePicker1.Value.ToString("yyyy-MM-dd") + "',eType='"+comboBox1.SelectedIndex+
                     "', eCivStatus='"+comboBox2.SelectedIndex+ "',eStatus = '" + comboBox3.SelectedIndex+
                     "' WHERE eID=" + vID, conn);
+                    comm.ExecuteNonQuery();
+                    if (comboBox3.SelectedIndex != 0)
+                    {
+                        comm = new MySqlCommand("UPDATE oncall set status=1,arrivedTime=CURRENT_TIMESTAMP WHERE driver=" + vID, conn);
+                        comm.ExecuteNonQuery();
+                    }
                 }
-                comm.ExecuteNonQuery();
                 conn.Close();
                 buttonLogout_Click(sender, e);
             }

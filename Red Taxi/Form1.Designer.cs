@@ -53,7 +53,6 @@
             this.textBoxUser.TabIndex = 1;
             this.textBoxUser.Text = "Username";
             this.textBoxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
             this.textBoxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUser_KeyDown);
             this.textBoxUser.Leave += new System.EventHandler(this.textBoxUser_Leave);

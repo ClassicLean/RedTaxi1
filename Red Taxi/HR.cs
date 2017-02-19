@@ -18,10 +18,12 @@ namespace Red_Taxi
         int oldxsize = 0;
         int oldysize = 0;
         int increm = -1;
-        public HR()
+        string z;
+        public HR(string b)
         {
             InitializeComponent();
             panel3.Size = new Size(0, 0);
+            z = b;
         }
 
         private void HR_Load(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Red_Taxi
 
         private void buttonEmp_Click(object sender, EventArgs e)
         {
-            Employee emp = new Employee();
+            Employee emp = new Employee(z);
             emp.reference_to_HR = this;
             emp.Show();
             this.Hide();

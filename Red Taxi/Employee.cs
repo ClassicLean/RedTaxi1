@@ -22,10 +22,11 @@ namespace Red_Taxi
         string id;
         string uName;
 
-        public Employee()
+        public Employee(string b)
         {
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+            empName = b;
         }
 
         private void Employee_Load(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace Red_Taxi
             {
                 conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee where eName != '"+empName+"'", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
@@ -96,32 +97,7 @@ namespace Red_Taxi
                 MessageBox.Show(exx.ToString());
             }
         }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-
-            DialogResult r = MessageBox.Show("Do you want to update?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (r == DialogResult.Yes && checkDuplicates() && checkText())
-            {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("UPDATE employee SET " +
-                    "eName = '" + textBoxeName.Text + "'," +
-                    "eType = '" + comboBoxeType.SelectedIndex + "'," +
-                    "eBday = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "'," +
-                    "eLicense = '" + textBoxlNumber.Text + "'," +
-                    "eCivStatus = '" + comboBoxcStatus.SelectedIndex + "'," +
-                    "uName = '" + textBoxUsername.Text + "'," +
-                    "pWord = '" + textBoxPassword.Text + "'" +
-                    //"sStatus = '" + comboBoxcStatus + "'" +
-                    "WHERE eID =" + employeeID + ";", conn);
-
-                comm.ExecuteNonQuery();
-
-                conn.Close();
-                Rifrish();
-            }
-        }
+       
 
         private Boolean checkDuplicates()
         {

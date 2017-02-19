@@ -14,14 +14,13 @@ namespace Red_Taxi
     {
         public MySqlConnection conn;
         public HR reference_to_HR { get; set; }
-        public Operator reference_to_operator { get; set; }
-        private bool userCheck=true, passCheck = true;
+        private bool userCheck = true, passCheck = true;
         public Form1()
         {
             InitializeComponent();
             conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -33,13 +32,9 @@ namespace Red_Taxi
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
-
                 if (dt.Rows.Count == 1)
                 {
-                   
-                    string type = dt.Rows[0]["eType"].ToString();
-
-                    Checker(type);
+                    Checker(dt.Rows[0]["eType"].ToString(), dt.Rows[0]["eName"].ToString());
                 }
                 else if (textBoxUser.Text == "" || textBoxPass.Text == "")
                 {
@@ -60,37 +55,33 @@ namespace Red_Taxi
                 conn.Close();
             }
         }
-        public void Checker(string a)
+        public void Checker(string a,string b)
         {
-             /*
-             0 = hr 
-             1 = operator
-             2 = driver
-             */
+            /*
+            0 = hr 
+            1 = operator
+            2 = driver
+            */
 
             if (a == "0")
             {
-                HR hr = new HR();
+                HR hr = new HR(b);
                 hr.Show();
                 hr.reference_to_form1 = this;
                 this.Hide();
             }
 
-            else if( a == "1")
+            else if (a == "1")
             {
-                Assign ass = new Assign();
+                Assign ass = new Assign(b);
                 ass.login_ref = this;
                 ass.Show();
                 Hide();
             }
             else
             {
-                MessageBox.Show("You are not authorized to login the system, \n\tcontact HR for more info","Authorization error");
+                MessageBox.Show("You are not authorized to login the system, \n\tcontact HR for more info", "Authorization error");
             }
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Rifrish()
@@ -166,7 +157,7 @@ namespace Red_Taxi
             if (passCheck)
             {
                 textBoxPass.Text = "Password";
-                textBoxPass.PasswordChar='\0';
+                textBoxPass.PasswordChar = '\0';
                 textBoxPass.Font = new Font("Roboto Light", 8, FontStyle.Italic);
                 textBoxPass.ForeColor = Color.FromArgb(148, 165, 165);
             }
