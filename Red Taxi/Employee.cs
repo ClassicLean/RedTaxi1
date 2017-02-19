@@ -133,10 +133,6 @@ namespace Red_Taxi
                 DataTable dt1 = new DataTable();
                 adp.Fill(dt1);
                 conn.Close();
-                if (uName == textBoxUsername.Text)
-                {
-                    return true;
-                }
                 if (dt1.Rows.Count > 0)
                 {
                     MessageBox.Show("Username taken");
@@ -162,7 +158,7 @@ namespace Red_Taxi
             if (textBoxeName.Text == "" || comboBoxeType.Text == "" || textBoxlNumber.Text == "" 
                 || comboBoxcStatus.Text == "" || textBoxUsername.Text == "" || 
                 textBoxPassword.Text == "" )
-                MessageBox.Show("Please fill out required fills");
+                MessageBox.Show("Please fill out required fields");
             else
                 return true;
             return false;
@@ -180,6 +176,11 @@ namespace Red_Taxi
         private void buttonInsert_VisibleChanged(object sender, EventArgs e)
         {
             Rifrish();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

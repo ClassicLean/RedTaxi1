@@ -30,6 +30,7 @@ namespace Red_Taxi
             comboBox1.SelectedIndex = 0;
             textBoxSearch.Clear();
             textBoxSearch.Visible = SearchType != 2;
+            magikero();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -68,14 +69,7 @@ namespace Red_Taxi
             }
             else
             {
-                MySqlCommand comm;
-                conn.Open();
-                comm = new MySqlCommand("SELECT vId,plateNum,vehicleType,chasisNumber,boundaryAmount FROM vehicles WHERE vID IN (select eVehicle from employee) AND vehicles.vID NOT IN (select vehicle from oncall where status = 1)", conn);
-                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                dataGridView1.DataSource = dt;
-                conn.Close();
+                magikero();
             }
         }
 
@@ -92,12 +86,19 @@ namespace Red_Taxi
 
         private void buttonVSel_Click(object sender, EventArgs e)
         {
-            upper.valuePassed = Results;
-            upper.onlySelSHouldCall();
+            if (Results.Length > 0)
+            {
+                upper.valuePassed = Results;
+                upper.onlySelSHouldCall();
+            }
             button2_Click(sender, e);
         }
 
         private void dialogSel_Load(object sender, EventArgs e)
+        {
+            magikero();
+        }
+        private void magikero()
         {
             try
             {
@@ -108,6 +109,7 @@ namespace Red_Taxi
                 adp.Fill(dt);
                 dataGridView1.DataSource = dt;
                 conn.Close();
+                dataGridView1.ClearSelection();
             }
             catch (Exception ee)
             {
@@ -115,7 +117,6 @@ namespace Red_Taxi
                 conn.Close();
             }
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

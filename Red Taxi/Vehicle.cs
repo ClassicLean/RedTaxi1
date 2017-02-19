@@ -224,5 +224,10 @@ namespace Red_Taxi
             }
             e.SuppressKeyPress = !taning;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

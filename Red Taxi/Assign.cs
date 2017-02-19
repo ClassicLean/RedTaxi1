@@ -16,6 +16,7 @@ namespace Red_Taxi
         public Form1 login_ref;
         public MySqlConnection conn;
         public String[] valuePassed;
+        int increm = -1;
         public Assign()
         {
             InitializeComponent();
@@ -25,6 +26,8 @@ namespace Red_Taxi
         private void Assign_Load(object sender, EventArgs e)
         {
             Rifrish();
+            buttonRecord.BackColor = Color.FromArgb(38, 186, 154);
+            buttonRecord.Enabled = false;
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -64,66 +67,18 @@ namespace Red_Taxi
         }
         private void buttonRecord_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                /*
-                DialogResult r = MessageBox.Show("Do you want to record driver '" + textBoxDriver.Text + "'?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                if (r == DialogResult.Yes)
-                {
-                    vTypeChecker();
-                    conn.Open();
-                    MySqlCommand comm = new MySqlCommand("INSERT INTO oncall(vehicle,driver,note) VALUES('" + vehicle_type + "','" +
-                        int.Parse(textBoxDriver.Text) + "','" + textBoxNote.Text + "')", conn);
-                    comm.ExecuteNonQuery();
-
-                    conn.Close();
-                }*/
-                Rifrish();
-            }
-
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-                conn.Close();
-            }
+            buttonView.BackColor = Color.FromArgb(247, 93, 89);
+            buttonRecord.BackColor = Color.FromArgb(38, 186, 154);
+            buttonRecord.Enabled = false;
+            buttonView.Enabled = true;
+            increm = 1;
+            timer1.Start();
+            Rifrish();
         }
 
         public void vTypeChecker()
         {
-            /*
-             * 
-                Single motorcycle
-                Tricycle
-                Common
-                Van
-                Mini Truck
-             * *//*
-            if (comboBoxDriver.Text == "Single motorcycle")
-            {
-                vehicle_type = 0;
-            }
 
-            else if (comboBoxDriver.Text == "Tricycle")
-            {
-                vehicle_type = 1;
-            }
-
-            else if (comboBoxDriver.Text == "Common")
-            {
-                vehicle_type = 2;
-            }
-
-            else if (comboBoxDriver.Text == "Van")
-            {
-                vehicle_type = 3;
-            }
-
-            else if (comboBoxDriver.Text == "Mini Truck")
-            {
-                vehicle_type = 4;
-            }*/
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,22 +87,12 @@ namespace Red_Taxi
 
         private void buttonView_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                MySqlCommand comm = new MySqlCommand("SELECT * FROM oncall WHERE driver = " + textBoxSearch.Text, conn);
-                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                dataGridView1.DataSource = dt;
-
-                conn.Close();
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-                conn.Close();
-            }
+            buttonRecord.BackColor = Color.FromArgb(247, 93, 89);
+            buttonView.BackColor = Color.FromArgb(38, 186, 154);
+            buttonRecord.Enabled = true;
+            buttonView.Enabled = false;
+            increm = -1;
+            timer1.Start();
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -159,6 +104,7 @@ namespace Red_Taxi
                 MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP", conn);
                 comm.ExecuteNonQuery();
                 conn.Close();
+                Rifrish();
             }
         }
 
@@ -193,6 +139,50 @@ namespace Red_Taxi
             }
             textBox1.Text = valuePassed[1];
             comboBoxDriver.Enabled = true;
+            button2.Enabled = true;
+        }
+        int oldxsize = 223;
+        int oldysize = 58;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ambot();
+            if (oldxsize >= 233 && increm > 0)
+            {
+                timer1.Stop();
+            }
+            else if (oldxsize <= -144)
+            {
+                timer1.Stop();
+            }
+        }
+        private void ambot()
+        {
+            panel3.Location = new Point(oldxsize += 29 * increm, oldysize);
+            panel5.Location = new Point((oldxsize + 266), 302);
+            panel1.Location = new Point((oldxsize + 318), 26);
+            panel4.Location = new Point((oldxsize - 102), 280);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                MySqlCommand comm = new MySqlCommand("SELECT eID FROM employee WHERE eName = '" + comboBoxDriver.SelectedItem.ToString() + "'", conn);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                string x = dt.Rows[0]["eID"].ToString();
+                conn.Close();
+                conn.Open();
+                comm = new MySqlCommand("INSERT INTO oncall VALUES (Null," + valuePassed[0] + "," + x + ",CURRENT_TIMESTAMP,NULL,'" + textBoxNote.Text + "',0,0)", conn);
+                comm.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception eex)
+            {
+
+            }
         }
     }
 }
