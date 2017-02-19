@@ -105,6 +105,8 @@ namespace Red_Taxi
                 vehicle_type = comboBoxVehicle.SelectedIndex;
                 status = comboBoxStatus.SelectedIndex;
             }
+
+            if()
         }
 
         private void Rifrish()
@@ -186,6 +188,11 @@ namespace Red_Taxi
             upDialogue ups = new upDialogue(this, 1, dataGridView1.Rows[e.RowIndex].Cells);
             ups.Show();
             Hide();
+        }
+
+        private void textBoxBAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //e.KeyChar
         }
     }
 }

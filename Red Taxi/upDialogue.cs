@@ -48,7 +48,7 @@ namespace Red_Taxi
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if(choice==1)
+           /* if(choice==1)
             {
                 try
                 {
@@ -67,7 +67,7 @@ namespace Red_Taxi
                 }
                 textBoxPNumber.Text
 
-            }
+            }*/
         }
     }
 }
