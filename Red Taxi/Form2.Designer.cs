@@ -69,7 +69,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
-            this.comboBox1.TabIndex = 9;
+            this.comboBox1.TabIndex = 0;
             this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -84,7 +84,7 @@
             this.buttonVSel.Location = new System.Drawing.Point(118, 200);
             this.buttonVSel.Name = "buttonVSel";
             this.buttonVSel.Size = new System.Drawing.Size(75, 20);
-            this.buttonVSel.TabIndex = 8;
+            this.buttonVSel.TabIndex = 2;
             this.buttonVSel.Text = "Select";
             this.buttonVSel.UseVisualStyleBackColor = false;
             this.buttonVSel.Click += new System.EventHandler(this.buttonVSel_Click);
@@ -103,7 +103,7 @@
             this.comboBoxVehicle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxVehicle.Name = "comboBoxVehicle";
             this.comboBoxVehicle.Size = new System.Drawing.Size(120, 21);
-            this.comboBoxVehicle.TabIndex = 7;
+            this.comboBoxVehicle.TabIndex = 1;
             this.comboBoxVehicle.SelectedIndexChanged += new System.EventHandler(this.comboBoxVehicle_SelectedIndexChanged);
             // 
             // dataGridView1
@@ -119,7 +119,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -146,7 +146,7 @@
             this.textBoxSearch.Location = new System.Drawing.Point(72, 20);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(121, 14);
+            this.textBoxSearch.Size = new System.Drawing.Size(121, 13);
             this.textBoxSearch.TabIndex = 5;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -167,7 +167,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(316, -3);
             this.button2.Name = "button2";
@@ -185,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(341, 274);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dialogSel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

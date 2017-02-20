@@ -20,7 +20,7 @@ namespace Red_Taxi
         public Assign(string b)
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
             label8.Text = b;
         }
 
@@ -187,6 +187,16 @@ namespace Red_Taxi
                     Rifrish();
                 }
             }       
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            button2_Click(sender, e);
         }
     }
 }

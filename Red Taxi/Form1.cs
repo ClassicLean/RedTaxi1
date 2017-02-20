@@ -18,7 +18,7 @@ namespace Red_Taxi
         public Form1()
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -161,6 +161,11 @@ namespace Red_Taxi
                 textBoxPass.Font = new Font("Roboto Light", 8, FontStyle.Italic);
                 textBoxPass.ForeColor = Color.FromArgb(148, 165, 165);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void textBoxPass_KeyDown(object sender, KeyEventArgs e)

@@ -25,7 +25,7 @@ namespace Red_Taxi
         public Employee(string b)
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
             empName = b;
         }
 
@@ -45,7 +45,7 @@ namespace Red_Taxi
         {
             try
             {
-                conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
+                conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand("SELECT * FROM employee where eName != '"+empName+"'", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -157,6 +157,11 @@ namespace Red_Taxi
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

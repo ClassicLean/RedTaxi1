@@ -91,7 +91,8 @@
             this.textBoxSearch.Location = new System.Drawing.Point(93, 6);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(156, 13);
-            this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // label1
             // 
@@ -163,7 +164,7 @@
             this.textBoxeName.Location = new System.Drawing.Point(117, 222);
             this.textBoxeName.Name = "textBoxeName";
             this.textBoxeName.Size = new System.Drawing.Size(100, 13);
-            this.textBoxeName.TabIndex = 0;
+            this.textBoxeName.TabIndex = 1;
             // 
             // comboBoxeType
             // 
@@ -178,14 +179,14 @@
             this.comboBoxeType.Location = new System.Drawing.Point(117, 244);
             this.comboBoxeType.Name = "comboBoxeType";
             this.comboBoxeType.Size = new System.Drawing.Size(120, 21);
-            this.comboBoxeType.TabIndex = 16;
+            this.comboBoxeType.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(117, 270);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // textBoxlNumber
             // 
@@ -194,7 +195,7 @@
             this.textBoxlNumber.Location = new System.Drawing.Point(117, 300);
             this.textBoxlNumber.Name = "textBoxlNumber";
             this.textBoxlNumber.Size = new System.Drawing.Size(100, 13);
-            this.textBoxlNumber.TabIndex = 18;
+            this.textBoxlNumber.TabIndex = 4;
             // 
             // comboBoxcStatus
             // 
@@ -210,7 +211,7 @@
             this.comboBoxcStatus.Location = new System.Drawing.Point(117, 321);
             this.comboBoxcStatus.Name = "comboBoxcStatus";
             this.comboBoxcStatus.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxcStatus.TabIndex = 19;
+            this.comboBoxcStatus.TabIndex = 5;
             // 
             // textBoxUsername
             // 
@@ -219,7 +220,7 @@
             this.textBoxUsername.Location = new System.Drawing.Point(117, 350);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(100, 13);
-            this.textBoxUsername.TabIndex = 20;
+            this.textBoxUsername.TabIndex = 6;
             // 
             // textBoxPassword
             // 
@@ -228,7 +229,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(117, 375);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(100, 13);
-            this.textBoxPassword.TabIndex = 21;
+            this.textBoxPassword.TabIndex = 7;
             // 
             // dataGridView1
             // 
