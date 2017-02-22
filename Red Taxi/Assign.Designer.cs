@@ -126,6 +126,7 @@
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Vehicle:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -299,6 +300,7 @@
             this.textBox1.Size = new System.Drawing.Size(70, 13);
             this.textBox1.TabIndex = 26;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBoxDriver
             // 

@@ -15,12 +15,12 @@ namespace Red_Taxi
         public MySqlConnection conn;
         private int SearchType;
         public string[] Results = new string[2];
-        Assign upper;
-        public dialogSel(Assign x)
+        Form upper;
+        public dialogSel(Form x)
         {
             InitializeComponent();
             upper = x;
-            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void comboBoxVehicle_SelectedIndexChanged(object sender, EventArgs e)

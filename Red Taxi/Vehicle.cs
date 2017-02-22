@@ -21,7 +21,7 @@ namespace Red_Taxi
         public Vehicle()
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
 
         }
 

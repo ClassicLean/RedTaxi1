@@ -20,7 +20,7 @@ namespace Red_Taxi
         public Assign(string b)
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
             label8.Text = b;
         }
 
@@ -167,10 +167,14 @@ namespace Red_Taxi
                 comm = new MySqlCommand("INSERT INTO oncall VALUES (Null," + valuePassed[0] + "," + x + ",CURRENT_TIMESTAMP,NULL,'" + textBoxNote.Text + "',0,0)", conn);
                 comm.ExecuteNonQuery();
                 conn.Close();
+                Rifrish();
+                textBox1.Clear();
+                comboBoxDriver.Text = "";
+                button2.Enabled = false;
             }
             catch (Exception eex)
             {
-                //MessageBox.Show(eex.ToString());
+             MessageBox.Show(eex.ToString());
             }
         }
 
@@ -182,7 +186,7 @@ namespace Red_Taxi
                 if (r == DialogResult.Yes)
                 {
                     conn.Open();
-                    MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP", conn);
+                    MySqlCommand comm = new MySqlCommand("UPDATE onCall SET status=1,arrivedTime=CURRENT_TIMESTAMP WHERE callid='"+ dataGridView1.Rows[e.RowIndex].Cells["callID"].Value.ToString()+"'", conn);
                     comm.ExecuteNonQuery();
                     conn.Close();
                     Rifrish();
@@ -203,6 +207,16 @@ namespace Red_Taxi
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1_CellContentDoubleClick_2(sender, e);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -48,6 +48,9 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.buttonVSel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@
             this.buttonInsert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInsert.ForeColor = System.Drawing.Color.White;
-            this.buttonInsert.Location = new System.Drawing.Point(32, 412);
+            this.buttonInsert.Location = new System.Drawing.Point(32, 429);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(80, 30);
             this.buttonInsert.TabIndex = 0;
@@ -71,12 +74,13 @@
             // buttonLogout
             // 
             this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonLogout.FlatAppearance.BorderSize = 0;
             this.buttonLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
             this.buttonLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogout.ForeColor = System.Drawing.Color.White;
-            this.buttonLogout.Location = new System.Drawing.Point(113, 412);
+            this.buttonLogout.Location = new System.Drawing.Point(113, 429);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(87, 30);
             this.buttonLogout.TabIndex = 2;
@@ -106,7 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 247);
+            this.label2.Location = new System.Drawing.Point(25, 246);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 6;
@@ -115,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 273);
+            this.label3.Location = new System.Drawing.Point(25, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 7;
@@ -124,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 299);
+            this.label4.Location = new System.Drawing.Point(25, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
             this.label4.TabIndex = 8;
@@ -133,7 +137,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 325);
+            this.label5.Location = new System.Drawing.Point(25, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 13);
             this.label5.TabIndex = 9;
@@ -142,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 351);
+            this.label6.Location = new System.Drawing.Point(25, 346);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 10;
@@ -151,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 377);
+            this.label7.Location = new System.Drawing.Point(25, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 11;
@@ -192,7 +196,7 @@
             // 
             this.textBoxlNumber.BackColor = System.Drawing.Color.White;
             this.textBoxlNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxlNumber.Location = new System.Drawing.Point(117, 300);
+            this.textBoxlNumber.Location = new System.Drawing.Point(118, 299);
             this.textBoxlNumber.Name = "textBoxlNumber";
             this.textBoxlNumber.Size = new System.Drawing.Size(100, 13);
             this.textBoxlNumber.TabIndex = 4;
@@ -208,7 +212,7 @@
             "Married",
             "Divorced",
             "Widowed"});
-            this.comboBoxcStatus.Location = new System.Drawing.Point(117, 321);
+            this.comboBoxcStatus.Location = new System.Drawing.Point(117, 320);
             this.comboBoxcStatus.Name = "comboBoxcStatus";
             this.comboBoxcStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxcStatus.TabIndex = 5;
@@ -217,7 +221,7 @@
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.White;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Location = new System.Drawing.Point(117, 350);
+            this.textBoxUsername.Location = new System.Drawing.Point(117, 347);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(100, 13);
             this.textBoxUsername.TabIndex = 6;
@@ -226,7 +230,7 @@
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.White;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Location = new System.Drawing.Point(117, 375);
+            this.textBoxPassword.Location = new System.Drawing.Point(117, 372);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(100, 13);
             this.textBoxPassword.TabIndex = 7;
@@ -242,14 +246,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(69)))), ((int)(((byte)(95)))));
             this.dataGridView1.Location = new System.Drawing.Point(16, 25);
@@ -271,7 +275,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(201, 412);
+            this.button1.Location = new System.Drawing.Point(201, 429);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 30);
             this.button1.TabIndex = 2;
@@ -279,12 +283,53 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(119, 398);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(70, 13);
+            this.textBox1.TabIndex = 29;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 396);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Vehicle:";
+            // 
+            // buttonVSel
+            // 
+            this.buttonVSel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(93)))), ((int)(((byte)(89)))));
+            this.buttonVSel.FlatAppearance.BorderSize = 0;
+            this.buttonVSel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.buttonVSel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(186)))), ((int)(((byte)(154)))));
+            this.buttonVSel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVSel.ForeColor = System.Drawing.Color.White;
+            this.buttonVSel.Location = new System.Drawing.Point(190, 397);
+            this.buttonVSel.Name = "buttonVSel";
+            this.buttonVSel.Size = new System.Drawing.Size(49, 18);
+            this.buttonVSel.TabIndex = 27;
+            this.buttonVSel.Text = "Select";
+            this.buttonVSel.UseVisualStyleBackColor = false;
+            this.buttonVSel.Click += new System.EventHandler(this.buttonVSel_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(324, 447);
+            this.CancelButton = this.buttonLogout;
+            this.ClientSize = new System.Drawing.Size(324, 484);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.buttonVSel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
@@ -340,5 +385,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonVSel;
     }
 }

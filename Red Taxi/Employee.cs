@@ -45,7 +45,7 @@ namespace Red_Taxi
         {
             try
             {
-                conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
+                conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
                 conn.Open();
                 MySqlCommand comm = new MySqlCommand("SELECT * FROM employee where eName != '"+empName+"'", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
@@ -180,7 +180,36 @@ namespace Red_Taxi
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
+            if (textBoxSearch.Text != "")
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE eName != '" + empName + "' AND eName LIKE '" + textBoxSearch.Text + "%'", conn);
+                    MySqlDataAdapter adp = new MySqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                    conn.Close();
+                }
+            }
 
+            else
+            {
+                Rifrish();
+            }
+        }
+
+        private void buttonVSel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            dialogSel sakyanan = new dialogSel(this);
+            sakyanan.Show();
         }
     }
 }
