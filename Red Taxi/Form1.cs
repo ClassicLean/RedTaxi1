@@ -18,7 +18,7 @@ namespace Red_Taxi
         public Form1()
         {
             InitializeComponent();
-            conn = new MySqlConnection("Server=172.22.10.202;Database=redtaxi;Uid=root;Pwd=root;");
+            conn = new MySqlConnection("Server=localhost;Database=redtaxi;Uid=root;Pwd=root;");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,13 +28,13 @@ namespace Red_Taxi
             {
                 conn.Open();
 
-                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE uName = '" + textBoxUser.Text + "' AND pWord = '" + textBoxPass.Text + "'", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE uName = '" + textBoxUser.Text.ToLower() + "' AND pWord = '" + textBoxPass.Text + "'", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 adp.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
-                    Checker(dt.Rows[0]["eType"].ToString(), dt.Rows[0]["eName"].ToString());
+                    Checker(dt.Rows[0]["eType"].ToString(), dt.Rows[0]["eName"].ToString(),dt.Rows[0]["eStatus"].ToString());
                 }
                 else if (textBoxUser.Text == "" || textBoxPass.Text == "")
                 {
@@ -51,37 +51,38 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Nerror: " + ee);
+                //MessageBox.Show("Nerror: " + ee);
                 conn.Close();
             }
         }
-        public void Checker(string a,string b)
+        public void Checker(string a,string b,string c)
         {
             /*
             0 = hr 
             1 = operator
             2 = driver
             */
+            if(c.Equals("0"))
+                if (a == "0")
+                {
+                    HR hr = new HR(b);
+                    hr.Show();
+                    hr.reference_to_form1 = this;
+                    this.Hide();
+                }
 
-            if (a == "0")
-            {
-                HR hr = new HR(b);
-                hr.Show();
-                hr.reference_to_form1 = this;
-                this.Hide();
-            }
-
-            else if (a == "1")
-            {
-                Assign ass = new Assign(b);
-                ass.login_ref = this;
-                ass.Show();
-                Hide();
-            }
+                else if (a == "1")
+                {
+                    Assign ass = new Assign(b);
+                    ass.login_ref = this;
+                    ass.Show();
+                    Hide();
+                }
+                else
+                    MessageBox.Show("You are not authorized to login the system, \n\tcontact HR for more info", "Authorization error");
             else
-            {
                 MessageBox.Show("You are not authorized to login the system, \n\tcontact HR for more info", "Authorization error");
-            }
+
         }
 
         private void Rifrish()
@@ -98,7 +99,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }

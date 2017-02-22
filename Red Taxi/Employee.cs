@@ -57,9 +57,10 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
+            dataGridView1.ClearSelection();
         }
         private void buttonLogout_Click(object sender, EventArgs e)
         {
@@ -76,9 +77,9 @@ namespace Red_Taxi
                 {
                     conn.Open();
                     MySqlCommand comm = new MySqlCommand("INSERT INTO employee " +
-                        "VALUES(NULL, '" + textBoxeName.Text.ToLower() + "','" + comboBoxeType.SelectedIndex + "','" +
+                        "VALUES(NULL, '" + textBoxeName.Text + "','" + comboBoxeType.SelectedIndex + "','" +
                         dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + textBoxlNumber.Text + "','" +
-                        comboBoxcStatus.SelectedIndex + "','" + textBoxUsername.Text + "','" + textBoxPassword.Text + "','" +
+                        comboBoxcStatus.SelectedIndex + "','" + textBoxUsername.Text.ToLower() + "','" + textBoxPassword.Text + "','" +
                         "0')", conn);
                     comm.ExecuteNonQuery();
                     conn.Close();
@@ -94,17 +95,19 @@ namespace Red_Taxi
             }
             catch (Exception exx)
             {
-                MessageBox.Show(exx.ToString());
+                //MessageBox.Show(exx.ToString());
+                conn.Close();
             }
         }
        
 
         private Boolean checkDuplicates()
         {
+            
             try
             {
                 conn.Open();
-                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE uName = '" + textBoxUsername.Text + "';", conn);
+                MySqlCommand comm = new MySqlCommand("SELECT * FROM employee WHERE uName = '" + textBoxUsername.Text.ToLower() + "';", conn);
                 MySqlDataAdapter adp = new MySqlDataAdapter(comm);
                 DataTable dt1 = new DataTable();
                 adp.Fill(dt1);
@@ -118,10 +121,26 @@ namespace Red_Taxi
                 {
                     return true;
                 }
+
+                conn.Open();
+                comm = new MySqlCommand("SELECT * FROM employee WHERE eName = '" + textBoxeName.Text + "';", conn);
+                adp = new MySqlDataAdapter(comm);
+                dt1 = new DataTable();
+                adp.Fill(dt1);
+                conn.Close();
+                if (dt1.Rows.Count > 0)
+                {
+                    MessageBox.Show("User Exists!");
+                }
+
+                else
+                {
+                    return true;
+                }
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
 

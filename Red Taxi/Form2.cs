@@ -63,7 +63,7 @@ namespace Red_Taxi
                 }
                 catch (Exception ee)
                 {
-                    MessageBox.Show(ee.ToString());
+                    //MessageBox.Show(ee.ToString());
                     conn.Close();
                 }
             }
@@ -113,7 +113,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }
@@ -132,7 +132,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }
@@ -145,6 +145,16 @@ namespace Red_Taxi
                 upper.onlySelSHouldCall();
             }
             button2_Click(sender, e);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1_CellContentDoubleClick(sender, e);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1_CellContentClick(sender, e);
         }
     }
 }

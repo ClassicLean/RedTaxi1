@@ -57,7 +57,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }
@@ -88,6 +88,7 @@ namespace Red_Taxi
 
         private void buttonView_Click(object sender, EventArgs e)
         {
+            dataGridView1.ClearSelection();
             buttonRecord.BackColor = Color.FromArgb(247, 93, 89);
             buttonView.BackColor = Color.FromArgb(38, 186, 154);
             buttonRecord.Enabled = true;
@@ -122,7 +123,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
             textBox1.Text = valuePassed[1];
@@ -169,7 +170,7 @@ namespace Red_Taxi
             }
             catch (Exception eex)
             {
-                MessageBox.Show(eex.ToString());
+                //MessageBox.Show(eex.ToString());
             }
         }
 
@@ -197,6 +198,11 @@ namespace Red_Taxi
         private void button2_Click_1(object sender, EventArgs e)
         {
             button2_Click(sender, e);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1_CellContentDoubleClick_2(sender, e);
         }
     }
 }

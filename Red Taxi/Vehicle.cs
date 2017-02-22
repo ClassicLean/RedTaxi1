@@ -62,7 +62,6 @@ namespace Red_Taxi
                         textBoxPNumber.Text + "','" + vehicle_type + "','" + 
                         textBoxCNumber.Text + "','" + textBoxBAmount.Text + "',0)", conn);
                     comm.ExecuteNonQuery();
-
                     conn.Close();
                     textBoxPNumber.Clear();
                     comboBoxVehicle.SelectedIndex = 0;
@@ -77,7 +76,7 @@ namespace Red_Taxi
 
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }
@@ -122,9 +121,10 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
+            dataGridView1.ClearSelection();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -149,7 +149,7 @@ namespace Red_Taxi
                 }
                 catch (Exception ee)
                 {
-                    MessageBox.Show(ee.ToString());
+                    //MessageBox.Show(ee.ToString());
                     conn.Close();
                 }
             }
@@ -182,7 +182,7 @@ namespace Red_Taxi
             }
             catch (Exception ee)
             {
-                MessageBox.Show(ee.ToString());
+                //MessageBox.Show(ee.ToString());
                 conn.Close();
             }
         }
